@@ -1,0 +1,11 @@
+name: Test Docker Hub Connection
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ping-docker-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verificar conexión a Docker Hub
+        run: curl -I https://registry-1.docker.io/v2/
